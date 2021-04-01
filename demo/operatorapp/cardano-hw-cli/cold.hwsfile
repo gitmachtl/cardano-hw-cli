@@ -1,0 +1,6 @@
+{
+    "type": "StakePoolHWSigningFileShelley_ed25519",
+    "description": "StakePool Hardware Signing File",
+    "path": "1853H/1815H/0H/0H",
+    "cborXPubKeyHex": "58400f839a1a5e2ab76a354d828c131f2f8321540a7a5ad4ff6d507222d9105fad0d349432d320e83ba985bdeb6cf420a0f6cba0ead03fd0b2903f3171ac53612766"
+}
