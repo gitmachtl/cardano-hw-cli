@@ -49,6 +49,7 @@ import {
   rewardAddressToPubKeyHash,
   isDeviceVersionGTE,
   getAddressParameters,
+  validateVotingRegistrationAddressType,
 } from './util'
 import { Errors } from '../errors'
 import { decodeCbor, encodeCbor, removeNullFields } from '../util'
@@ -426,7 +427,7 @@ const TrezorCryptoProvider: () => Promise<CryptoProvider> = async () => {
       votingPublicKey: votingPublicKeyHex,
       stakingPath: hwStakeSigningFile.path,
       rewardAddressParameters: {
-        addressType: TrezorEnums.CardanoAddressType.BASE,
+        addressType: addressParameters.addressType,
         path: addressParameters.paymentPath as BIP32Path,
         stakingPath: addressParameters.stakePath,
       },
@@ -487,7 +488,12 @@ const TrezorCryptoProvider: () => Promise<CryptoProvider> = async () => {
       throw Error(Errors.AuxSigningFileNotFoundForVotingRewardAddress)
     }
 
+    validateVotingRegistrationAddressType(addressParams.addressType)
+
     const trezorAuxData = prepareVoteAuxiliaryData(hwStakeSigningFile, votePublicKeyHex, addressParams, nonce)
+    const util = require('util')
+
+    console.log(util.inspect(trezorAuxData, {showHidden: false, depth: null}))
     const dummyTx = prepareDummyTx(network, trezorAuxData)
 
     const response = await TrezorConnect.cardanoSignTransaction(dummyTx)
