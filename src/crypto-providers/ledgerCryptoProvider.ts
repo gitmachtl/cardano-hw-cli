@@ -262,7 +262,7 @@ export const LedgerCryptoProvider: () => Promise<CryptoProvider> = async () => {
     network: Network,
   ): LedgerTypes.PoolRewardAccount => {
     const addressParams = getAddressParameters(signingFiles, rewardAccount, network)
-    if (addressParams) {
+    if (addressParams && addressParams.address === rewardAccount) {
       return {
         type: LedgerTypes.PoolRewardAccountType.DEVICE_OWNED,
         params: {
