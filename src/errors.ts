@@ -85,6 +85,7 @@ const enum Errors {
   TrezorVersionError = 'Failed to retrieve trezor version',
   InvalidVotingRegistrationAddressType = 'Voting registration address type must be either BASE or REWARD',
   InvalidTransactionType = 'Invalid transaction type',
+  LedgerSignOperationalCertificateNotSupported = 'Signing operational certificate is not supported with your Ledger Cardano app version, please update your Ledger Cardano app to the lastest version',
 }
 
 export {

@@ -28,6 +28,11 @@ export const LEDGER_VERSIONS: { [key in LedgerCryptoProviderFeature]: DeviceVers
     minor: 3,
     patch: 0,
   },
+  [LedgerCryptoProviderFeature.SIGN_OPERATIONAL_CERTIFICATE]: {
+    major: 2,
+    minor: 3,
+    patch: 0,
+  },
 }
 
 export const TREZOR_VERSIONS: { [key in TrezorCryptoProviderFeature]: DeviceVersion } = {
