@@ -1040,34 +1040,6 @@ const transactions = {
           key: 0,
           data: [
             Buffer.from(
-              'b9de636bf236e5543377e4b4d6b63613f188fb65b83b8a61c4b68be0c196c3d8',
-              'hex',
-            ),
-            Buffer.from(
-              '5b7ea7fcdf9c16e465f1ea02ccf0c2b3e99db8f7a94bf0865766a79d2db8c90244580442810fec40fed90a234ccc1f817cfc7a2963ff00dcf4250920c8002f05',
-              'hex',
-            ),
-          ],
-          path: signingFiles.mint0.path,
-        },
-        {
-          key: 0,
-          data: [
-            Buffer.from(
-              'f87ee3ee2316d92f73dca6112a197340a1eae157574765099dd631132818bc15',
-              'hex',
-            ),
-            Buffer.from(
-              '5ccdd2985d3d91b0b170f5dca1698ca7990016203247c16306e536d75d58a35e1becb9f8a0dcd8535d6e95fb9820864d470a69ad9c654c618ff0902e79e51800',
-              'hex',
-            ),
-          ],
-          path: signingFiles.mint1.path,
-        },
-        {
-          key: 0,
-          data: [
-            Buffer.from(
               '2573f7cde2d182ebbcd63dc0940fd53064824e716a6d0238fa3780bac2933e2e',
               'hex',
             ),
@@ -1133,6 +1105,34 @@ const transactions = {
             ),
           ],
           path: signingFiles.multisigStake1.path,
+        },
+        {
+          key: 0,
+          data: [
+            Buffer.from(
+              'b9de636bf236e5543377e4b4d6b63613f188fb65b83b8a61c4b68be0c196c3d8',
+              'hex',
+            ),
+            Buffer.from(
+              '5b7ea7fcdf9c16e465f1ea02ccf0c2b3e99db8f7a94bf0865766a79d2db8c90244580442810fec40fed90a234ccc1f817cfc7a2963ff00dcf4250920c8002f05',
+              'hex',
+            ),
+          ],
+          path: signingFiles.mint0.path,
+        },
+        {
+          key: 0,
+          data: [
+            Buffer.from(
+              'f87ee3ee2316d92f73dca6112a197340a1eae157574765099dd631132818bc15',
+              'hex',
+            ),
+            Buffer.from(
+              '5ccdd2985d3d91b0b170f5dca1698ca7990016203247c16306e536d75d58a35e1becb9f8a0dcd8535d6e95fb9820864d470a69ad9c654c618ff0902e79e51800',
+              'hex',
+            ),
+          ],
+          path: signingFiles.mint1.path,
         },
       ],
     },
@@ -1300,6 +1300,47 @@ const transactions = {
             ),
             Buffer.from(
               '3c92f3bf17a20040459cb9ce5f5bc6ce525d531c7bc4b229741a7133440e87e9975993106dc3acf91e256cbdedcdee4ee1371df3a35fc53f75e1573f6b85d60f',
+              'hex',
+            ),
+          ],
+          path: signingFiles.payment0.path,
+        },
+      ],
+    },
+  },
+
+  ordinary_ConwayVotingProcedures: {
+    // hand-crafted according to the CDDL
+    cborHex:
+      '83a400818258204547c077e8f3a9184438e36503f78b634eb416658c336c2d017d9912a7c493c7000181a20058390113ca2480e9651a5c504b36eda271ec171cdd404cfe349097524a48bd8bee57ce33c7c1f711bc5801986d89dd68078f5922b83812cc86f65f011b0000000253d3ae64021a0002a38913a18202581cba41c59ac6e1a0e4ac304af98db801097d0bf8d2a5b28a54752426a1a1825820787142668a73c7c3ca6003571f429393f2d6dad8886bbcd0a9ba7aca07cc895e008201f6a0f6',
+    hwSigningFiles: [signingFiles.payment0, signingFiles.dRep],
+    network: 'MAINNET',
+    witnesses: {
+      byronWitnesses: [],
+      shelleyWitnesses: [
+        {
+          key: 0,
+          data: [
+            Buffer.from(
+              '7cc18df2fbd3ee1b16b76843b18446679ab95dbcd07b7833b66a9407c0709e37',
+              'hex',
+            ),
+            Buffer.from(
+              '376a59c1b49cacc2279ee361783fbf565a77dd1d4b7cb89fccdd6241d0ab4205c0a1abe38b359d9ff548bf7d1cc74729176050e8b6d93a6d87ad85af7a6a2f09',
+              'hex',
+            ),
+          ],
+          path: signingFiles.dRep.path,
+        },
+        {
+          key: 0,
+          data: [
+            Buffer.from(
+              'cd2b047d1a803eee059769cffb3dfd0a4b9327e55bc78aa962d9bd4f720db0b2',
+              'hex',
+            ),
+            Buffer.from(
+              '26b8121d83cd9c8ccb18273c6e2ca3c84e18905f5920bd96d6ded527597270aec8e6e0c5c1784ec9cb963a822658040fc342e49e0dbdf65628b9d65730162602',
               'hex',
             ),
           ],
