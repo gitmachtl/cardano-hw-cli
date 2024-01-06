@@ -333,7 +333,8 @@ export const LedgerCryptoProvider: (
             keyPath: path,
           }
         }
-        if (signingMode === SigningMode.PLUTUS_TRANSACTION) {
+        if (signingMode === SigningMode.PLUTUS_TRANSACTION ||
+            signingMode === SigningMode.ORDINARY_TRANSACTION) {
           return {
             type: LedgerTypes.DRepParamsType.KEY_HASH,
             keyHashHex: dRep.keyHash.toString('hex'),
